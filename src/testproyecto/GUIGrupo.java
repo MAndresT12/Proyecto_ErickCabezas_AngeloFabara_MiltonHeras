@@ -98,7 +98,7 @@ public class GUIGrupo extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(rootPane, "Integrante 3: Angelo Fabara");  
+        JOptionPane.showMessageDialog(rootPane, "Integrante 3: Angelo Fabara, username guthub: AngeloSFV2001");  
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
