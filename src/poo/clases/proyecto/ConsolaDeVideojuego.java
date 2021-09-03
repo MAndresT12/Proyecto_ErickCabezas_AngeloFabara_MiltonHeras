@@ -57,7 +57,10 @@ public class ConsolaDeVideojuego extends Maquina {
         this.horasDealquiler = horasDealquiler;
     }
 
-  
+    public double getValorPorHora() {
+        return valorPorHora;
+    }
+
     
     @Override
     public Double calcularPago() {
