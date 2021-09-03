@@ -76,7 +76,8 @@ public class ConsolaDeVideojuego extends Maquina {
     
     @Override
     public Double calcularPago() {
-        return (this.numMandos*this.valorPorMando)+(valorPorHora*horasDealquiler);
+        this.cobrado = (this.numMandos*this.valorPorMando)+(valorPorHora*horasDealquiler);
+        return this.cobrado;
     }
     
 }
