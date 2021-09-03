@@ -3,15 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package testproyecto;
+package poo.clases.proyecto;
 
 /**
  *
  * @author Milton
  */
 public abstract class  Maquina {
+    //public static double cobradoTotal;
     protected int horasDealquiler;
-    double valorPorHora;
-    
+    protected double valorPorHora;
+    protected double cobrado;
+ 
     public abstract Double calcularPago();
 }
