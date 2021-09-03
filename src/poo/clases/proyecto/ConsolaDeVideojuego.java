@@ -17,19 +17,19 @@ public class ConsolaDeVideojuego extends Maquina {
     public void setTipoDeConsola(String tipoDeConsola) {
         this.tipoDeConsola = tipoDeConsola;
         if("Xbox One".equals(this.tipoDeConsola)){
-            this.setValorPorHora(2);
+            this.valorPorHora =2;
         }
         if("Xbox Series X".equals(this.tipoDeConsola)){
-            this.setValorPorHora(2.50);
+            this.valorPorHora =2.50;
         }
         if("Wii ".equals(this.tipoDeConsola)){
-            this.setValorPorHora(1.25);
+            this.valorPorHora =1.25;
         }     
         if("Playstation 4".equals(this.tipoDeConsola)){
-            this.setValorPorHora(2.25);
+            this.valorPorHora =2.25;
         }   
         if("Playstation 5".equals(this.tipoDeConsola)){
-            this.setValorPorHora(2.75);
+            this.valorPorHora =2.75;
         }             
     }    
 
@@ -57,21 +57,6 @@ public class ConsolaDeVideojuego extends Maquina {
         this.horasDealquiler = horasDealquiler;
     }
 
-    public double getValorPorHora() {
-        return valorPorHora;
-    }
-
-    public void setValorPorHora(double valorPorHora) {
-        this.valorPorHora = valorPorHora;
-    }
-
-    public double getCobrado() {
-        return cobrado;
-    }
-
-    public void setCobrado(double cobrado) {
-        this.cobrado = cobrado;
-    }
   
     
     @Override
