@@ -1,21 +1,28 @@
+package poo.arcade.testproyecto;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo.arcade.testproyecto;
+
+
+import javax.swing.JOptionPane;
+import poo.clases.proyecto.ConsolaDeVideojuego;
 
 /**
  *
  * @author USUARIO
  */
 public class GUIConsola extends javax.swing.JFrame {
-
+ConsolaDeVideojuego consola;
+private double cobro;
     /**
      * Creates new form GUIConsola
      */
     public GUIConsola() {
         initComponents();
+        btnGuardarCobro.setEnabled(false);
     }
 
     /**
@@ -35,26 +42,18 @@ public class GUIConsola extends javax.swing.JFrame {
         btnCalcularpago = new javax.swing.JButton();
         btnGuardarCobro = new javax.swing.JButton();
         btnCancelarCobro = new javax.swing.JButton();
+        txtHorasAlquiladas = new javax.swing.JTextField();
+        lblHorasAlquiladas = new javax.swing.JLabel();
 
         lblConsola.setText("Consola:");
 
         cmbConsola.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Xbox One", "Xbox Series x", "Wi", "Play4", "Play5" }));
         cmbConsola.setSelectedIndex(-1);
-        cmbConsola.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbConsolaActionPerformed(evt);
-            }
-        });
 
         lblNumMandos.setText("Numero de mandos:");
 
         cmbMandos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4" }));
         cmbMandos.setSelectedIndex(-1);
-        cmbMandos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbMandosActionPerformed(evt);
-            }
-        });
 
         btnCalcularpago.setText("Calcular Cobro");
         btnCalcularpago.addActionListener(new java.awt.event.ActionListener() {
@@ -64,8 +63,20 @@ public class GUIConsola extends javax.swing.JFrame {
         });
 
         btnGuardarCobro.setText("Guardar Cobro");
+        btnGuardarCobro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarCobroActionPerformed(evt);
+            }
+        });
 
         btnCancelarCobro.setText("Cancelar Cobro");
+        btnCancelarCobro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarCobroActionPerformed(evt);
+            }
+        });
+
+        lblHorasAlquiladas.setText("Horas alquiladas:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -75,23 +86,27 @@ public class GUIConsola extends javax.swing.JFrame {
                 .addGap(132, 132, 132)
                 .addComponent(lblConsola)
                 .addGap(18, 18, 18)
-                .addComponent(cmbConsola, 0, 194, Short.MAX_VALUE)
+                .addComponent(cmbConsola, 0, 196, Short.MAX_VALUE)
                 .addGap(167, 167, 167))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(134, 134, 134)
-                        .addComponent(lblNumMandos)
-                        .addGap(18, 18, 18)
-                        .addComponent(cmbMandos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(52, 52, 52)
                         .addComponent(btnCalcularpago)
-                        .addGap(50, 50, 50)
+                        .addGap(52, 52, 52)
                         .addComponent(btnGuardarCobro)
-                        .addGap(35, 35, 35)
-                        .addComponent(btnCancelarCobro)))
-                .addContainerGap(103, Short.MAX_VALUE))
+                        .addGap(37, 37, 37)
+                        .addComponent(btnCancelarCobro))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(134, 134, 134)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblNumMandos)
+                            .addComponent(lblHorasAlquiladas))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtHorasAlquiladas, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cmbMandos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,12 +119,16 @@ public class GUIConsola extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblNumMandos)
                     .addComponent(cmbMandos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblHorasAlquiladas)
+                    .addComponent(txtHorasAlquiladas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGuardarCobro)
-                    .addComponent(btnCancelarCobro)
-                    .addComponent(btnCalcularpago))
-                .addContainerGap(48, Short.MAX_VALUE))
+                    .addComponent(btnCalcularpago)
+                    .addComponent(btnCancelarCobro))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -125,25 +144,59 @@ public class GUIConsola extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cmbConsolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbConsolaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmbConsolaActionPerformed
-
-    private void cmbMandosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbMandosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmbMandosActionPerformed
-
     private void btnCalcularpagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularpagoActionPerformed
         // TODO add your handling code here:
+        try{
+            if(llenos()){
+                int horasAlquiladas=Integer.parseInt(txtHorasAlquiladas.getText());
+                String tipoDeConsola= (String) cmbConsola.getSelectedItem();
+                int numMandos= Integer.parseInt((String) cmbMandos.getSelectedItem());
+                bloquearCampos();
+                consola=new ConsolaDeVideojuego();
+                consola.setTipoDeConsola(tipoDeConsola);
+                consola.setHorasDealquiler(horasAlquiladas);
+                consola.setNumMandos(numMandos);
+                cobro=consola.calcularPago();
+                JOptionPane.showMessageDialog(rootPane,"valor a cobrar: "+cobro+"$"
+                           ,"Cobro",JOptionPane.INFORMATION_MESSAGE);
+                btnGuardarCobro.setEnabled(true);  
+            }else{
+                JOptionPane.showMessageDialog(rootPane,"llenar todos los campos","ERROR",JOptionPane.ERROR_MESSAGE);
+            }
+            
+        }catch(NumberFormatException nfe){
+            JOptionPane.showMessageDialog(rootPane,"ingresar numeros eteros en Horas","ERROR",JOptionPane.ERROR_MESSAGE);
+        }catch(NullPointerException npe){
+            JOptionPane.showMessageDialog(rootPane,"No se calculo el cobro","ERROR",JOptionPane.ERROR_MESSAGE);
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(rootPane,"otro error"+e.toString(),"ERROR",JOptionPane.ERROR_MESSAGE);
+        }
         
     }//GEN-LAST:event_btnCalcularpagoActionPerformed
+
+    private void btnGuardarCobroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarCobroActionPerformed
+        // TODO add your handling code here:
+        GUICobro.setCobroTotal(cobro);
+        llimpiar();
+        btnGuardarCobro.setEnabled(false);
+        desbloquearCampos();
+        JOptionPane.showMessageDialog(rootPane,"cobro total  "+GUICobro.getCobroTotal()+
+                "$","ERROR",JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_btnGuardarCobroActionPerformed
+
+    private void btnCancelarCobroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarCobroActionPerformed
+        // TODO add your handling code here:
+        llimpiar();
+        desbloquearCampos();
+        btnGuardarCobro.setEnabled(false);
+    }//GEN-LAST:event_btnCancelarCobroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -171,6 +224,7 @@ public class GUIConsola extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(GUIConsola.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -179,7 +233,29 @@ public class GUIConsola extends javax.swing.JFrame {
             }
         });
     }
-
+    public boolean llenos(){
+    boolean txt1=txtHorasAlquiladas.getText().isEmpty();
+        if(cmbConsola.getSelectedIndex()!=-1&&txt1!=true){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public void llimpiar(){
+        cmbConsola.setSelectedIndex(-1);
+        cmbMandos.setSelectedIndex(-1);
+        txtHorasAlquiladas.setText(null);
+    }
+    public void bloquearCampos(){
+        cmbConsola.setEnabled(false);
+        cmbMandos.setEnabled(false);
+        txtHorasAlquiladas.setEnabled(false);
+    }
+    public void desbloquearCampos(){
+        cmbConsola.setEnabled(true);
+        cmbMandos.setEnabled(false);
+        txtHorasAlquiladas.setEnabled(true);
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCalcularpago;
     private javax.swing.JButton btnCancelarCobro;
@@ -188,6 +264,8 @@ public class GUIConsola extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbMandos;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblConsola;
+    private javax.swing.JLabel lblHorasAlquiladas;
     private javax.swing.JLabel lblNumMandos;
+    private javax.swing.JTextField txtHorasAlquiladas;
     // End of variables declaration//GEN-END:variables
 }

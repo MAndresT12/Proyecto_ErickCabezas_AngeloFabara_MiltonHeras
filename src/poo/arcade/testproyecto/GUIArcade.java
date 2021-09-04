@@ -197,7 +197,7 @@ public class GUIArcade extends javax.swing.JFrame {
         }catch(NullPointerException npe){
             JOptionPane.showMessageDialog(rootPane,"No se calculo el cobro","ERROR",JOptionPane.ERROR_MESSAGE);
         }catch(Exception e){
-            JOptionPane.showMessageDialog(rootPane,"otro erros"+e.toString(),"ERROR",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane,"otro error"+e.toString(),"ERROR",JOptionPane.ERROR_MESSAGE);
         }
         
     }//GEN-LAST:event_btnCalcularpagoActionPerformed
