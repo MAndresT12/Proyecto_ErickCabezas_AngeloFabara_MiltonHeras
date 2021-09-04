@@ -5,21 +5,18 @@
  */
 package poo.arcade.testproyecto;
 
-import java.awt.Component;
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author erick cabezas
+ * @author Milton
  */
-public class PnlEquipoRVirtual extends javax.swing.JPanel {
-
-    private Component rootPane;
+public class GUIEquipoRVirtual extends javax.swing.JFrame {
 
     /**
-     * Creates new form PnlEquipoRVirtual
+     * Creates new form GUIEquipoRVirtual
      */
-    public PnlEquipoRVirtual() {
+    public GUIEquipoRVirtual() {
         initComponents();
     }
 
@@ -32,6 +29,7 @@ public class PnlEquipoRVirtual extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         cmbEquipoVirtual = new javax.swing.JComboBox<>();
         lblEquipo = new javax.swing.JLabel();
         lblRealidadVirtual = new javax.swing.JLabel();
@@ -41,7 +39,9 @@ public class PnlEquipoRVirtual extends javax.swing.JPanel {
         btnGuardarCobro = new javax.swing.JButton();
         btnCancelarCobro = new javax.swing.JButton();
 
-        setBorder(javax.swing.BorderFactory.createTitledBorder("Equipo Realidad Virtual"));
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Equipo Realidad Virtual"));
 
         cmbEquipoVirtual.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Valve Index", "Oculus Rift", "HTC Vive", "Oculus Go" }));
         cmbEquipoVirtual.setSelectedIndex(-1);
@@ -66,27 +66,27 @@ public class PnlEquipoRVirtual extends javax.swing.JPanel {
 
         btnCancelarCobro.setText("Cancelar Cobro");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(80, 80, 80)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(lblEquipo, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblRealidadVirtual, javax.swing.GroupLayout.Alignment.LEADING))
                         .addGap(30, 30, 30)
                         .addComponent(cmbEquipoVirtual, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(91, 91, 91)
                                 .addComponent(lblSimulacion)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(cmbTipoSimulacion, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addGap(35, 35, 35)
                                 .addComponent(btnCalcularpago)
                                 .addGap(35, 35, 35)
@@ -95,29 +95,44 @@ public class PnlEquipoRVirtual extends javax.swing.JPanel {
                         .addComponent(btnCancelarCobro)))
                 .addContainerGap(42, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(33, 33, 33)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(lblEquipo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblRealidadVirtual))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(12, 12, 12)
                         .addComponent(cmbEquipoVirtual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblSimulacion)
                     .addComponent(cmbTipoSimulacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCalcularpago)
                     .addComponent(btnGuardarCobro)
                     .addComponent(btnCancelarCobro))
                 .addContainerGap(43, Short.MAX_VALUE))
         );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCalcularpagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularpagoActionPerformed
@@ -133,6 +148,40 @@ public class PnlEquipoRVirtual extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnCalcularpagoActionPerformed
 
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(GUIEquipoRVirtual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(GUIEquipoRVirtual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(GUIEquipoRVirtual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(GUIEquipoRVirtual.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new GUIEquipoRVirtual().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCalcularpago;
@@ -140,6 +189,7 @@ public class PnlEquipoRVirtual extends javax.swing.JPanel {
     private javax.swing.JButton btnGuardarCobro;
     private javax.swing.JComboBox<String> cmbEquipoVirtual;
     private javax.swing.JComboBox<String> cmbTipoSimulacion;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblEquipo;
     private javax.swing.JLabel lblRealidadVirtual;
     private javax.swing.JLabel lblSimulacion;
