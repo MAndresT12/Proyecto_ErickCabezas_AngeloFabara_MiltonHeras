@@ -12,10 +12,47 @@ package poo.clases.proyecto;
 public class Arcade extends Maquina{
     private String tipoDeArcade;
     private int numJugadores;
+
+    public void setTipoDeArcade(String tipoDeArcade) {
+        this.tipoDeArcade = tipoDeArcade;
+        if("Arcade deportivo".equals(this.tipoDeArcade)){
+            this.valorPorHora =1.00;
+        }
+        if("Arcade carreras".equals(this.tipoDeArcade)){
+            this.valorPorHora =1.00;
+        }
+        if("Arcade simulación".equals(this.tipoDeArcade)){
+            this.valorPorHora =1.50;
+        }
+        if("Arcade acción".equals(this.tipoDeArcade)){
+            this.valorPorHora =1.50;
+        }
+        if("Arcade clasico".equals(this.tipoDeArcade)){
+            this.valorPorHora =0.50;
+        }
+       
+    }
+
+    public void setNumJugadores(int numJugadores) {
+        this.numJugadores = numJugadores;
+    }
+
+    public int getHorasDealquiler() {
+        return horasDealquiler;
+    }
+
+    public void setHorasDealquiler(int horasDealquiler) {
+        this.horasDealquiler = horasDealquiler;
+    }
+
+    public double getValorPorHora() {
+        return valorPorHora;
+    }
     
     @Override
     public Double calcularPago() {
-       return this.horasDealquiler*this.valorPorHora;
+        this.cobrado=this.numJugadores*(this.horasDealquiler*this.valorPorHora);
+       return this.cobrado;
     }
     
 }

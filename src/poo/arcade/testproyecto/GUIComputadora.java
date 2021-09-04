@@ -1,23 +1,29 @@
+package poo.arcade.testproyecto;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo.arcade.testproyecto;
+
 
 import javax.swing.JOptionPane;
+import poo.clases.proyecto.Computadora;
 
 /**
  *
  * @author Milton
  */
 public class GUIComputadora extends javax.swing.JFrame {
-
+Computadora computadora;
+private double cobro;
+GUICobro cobroT;
     /**
      * Creates new form GUIComputadora
      */
     public GUIComputadora() {
         initComponents();
+        btnGuardarCobro.setEnabled(false);
     }
 
     /**
@@ -60,8 +66,18 @@ public class GUIComputadora extends javax.swing.JFrame {
         });
 
         btnGuardarCobro.setText("Guardar Cobro");
+        btnGuardarCobro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarCobroActionPerformed(evt);
+            }
+        });
 
         btnCancelarCobro.setText("Cancelar Cobro");
+        btnCancelarCobro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarCobroActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -75,7 +91,7 @@ public class GUIComputadora extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(cmbComputasoras, 0, 115, Short.MAX_VALUE)
+                        .addComponent(cmbComputasoras, 0, 1, Short.MAX_VALUE)
                         .addGap(151, 151, 151))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(txtHorasAlquiladas, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -87,7 +103,7 @@ public class GUIComputadora extends javax.swing.JFrame {
                 .addComponent(btnGuardarCobro)
                 .addGap(30, 30, 30)
                 .addComponent(btnCancelarCobro)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 47, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -112,13 +128,11 @@ public class GUIComputadora extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -131,15 +145,47 @@ public class GUIComputadora extends javax.swing.JFrame {
     private void btnCalcularpagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularpagoActionPerformed
         // TODO add your handling code here:
         try{
-
+            if(llenos()){
+                int horasAlquiladas=Integer.parseInt(txtHorasAlquiladas.getText());
+                String tipoDeCompu= (String) cmbComputasoras.getSelectedItem();
+                bloquearCampos();
+                computadora=new Computadora();
+                computadora.setTipoDeComputadora(tipoDeCompu);
+                computadora.setHorasDealquiler(horasAlquiladas);
+                cobro=computadora.calcularPago();
+                JOptionPane.showMessageDialog(rootPane,"valor a cobrar: "+cobro+"$"
+                           ,"Cobro",JOptionPane.INFORMATION_MESSAGE);
+                btnGuardarCobro.setEnabled(true);  
+            }else{
+                JOptionPane.showMessageDialog(rootPane,"llenar todos los campos","ERROR",JOptionPane.ERROR_MESSAGE);
+            }
+            
         }catch(NumberFormatException nfe){
-            JOptionPane.showMessageDialog(rootPane,"ingresar numeros en CI","ERROR",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane,"ingresar numeros eteros en Horas","ERROR",JOptionPane.ERROR_MESSAGE);
         }catch(NullPointerException npe){
-            JOptionPane.showMessageDialog(rootPane,"No se guardo el Estudiante","ERROR",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane,"No se calculo el cobro","ERROR",JOptionPane.ERROR_MESSAGE);
         }catch(Exception e){
             JOptionPane.showMessageDialog(rootPane,"otro erros"+e.toString(),"ERROR",JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btnCalcularpagoActionPerformed
+
+    private void btnGuardarCobroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarCobroActionPerformed
+        // TODO add your handling code here:
+        GUICobro.setCobroTotal(cobro);
+        llimpiar();
+        btnGuardarCobro.setEnabled(false);
+        desbloquearCampos();
+        JOptionPane.showMessageDialog(rootPane,"cobro total  "+GUICobro.getCobroTotal()+"$","ERROR",JOptionPane.INFORMATION_MESSAGE);
+        
+        
+    }//GEN-LAST:event_btnGuardarCobroActionPerformed
+
+    private void btnCancelarCobroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarCobroActionPerformed
+        // TODO add your handling code here:
+        llimpiar();
+        desbloquearCampos();
+        btnGuardarCobro.setEnabled(false);
+    }//GEN-LAST:event_btnCancelarCobroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,6 +213,7 @@ public class GUIComputadora extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(GUIComputadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -175,6 +222,26 @@ public class GUIComputadora extends javax.swing.JFrame {
             }
         });
     }
+public boolean llenos(){
+    boolean txt1=txtHorasAlquiladas.getText().isEmpty();
+        if(cmbComputasoras.getSelectedIndex()!=-1&&txt1!=true){
+            return true;
+        }else{
+            return false;
+        }
+    }
+public void llimpiar(){
+    cmbComputasoras.setSelectedIndex(-1);
+    txtHorasAlquiladas.setText(null);
+}
+public void bloquearCampos(){
+    cmbComputasoras.setEnabled(false);
+    txtHorasAlquiladas.setEnabled(false);
+}
+public void desbloquearCampos(){
+    cmbComputasoras.setEnabled(true);
+    txtHorasAlquiladas.setEnabled(true);
+}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCalcularpago;

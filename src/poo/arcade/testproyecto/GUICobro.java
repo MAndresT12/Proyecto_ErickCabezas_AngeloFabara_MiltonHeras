@@ -1,9 +1,11 @@
+package poo.arcade.testproyecto;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo.arcade.testproyecto;
+
 
 /**
  *
@@ -13,16 +15,26 @@ public class GUICobro extends javax.swing.JFrame {
  GUIConsola consola;
  GUIComputadora computadora;
  GUIArcade arcade;
- GUIEquipoRVirtual equipoRealidadVirtual;
+ GUIEquipoRVirtual equipoRVirtual;
+ 
+ private static double cobroTotal;
+    public static double getCobroTotal() {
+        return cobroTotal;
+    }
+
+    public static void setCobroTotal(double cobro) {
+        GUICobro.cobroTotal += cobro;
+    }
     /**
      * Creates new form GUICobro
      */
     public GUICobro() {
         initComponents();
+        
         consola=new GUIConsola();
         computadora = new GUIComputadora();
-        arcade = new GUIArcade();
-        equipoRealidadVirtual = new GUIEquipoRVirtual();
+        arcade=new GUIArcade();
+        equipoRVirtual=new GUIEquipoRVirtual();
     }
 
     /**
@@ -163,6 +175,7 @@ public class GUICobro extends javax.swing.JFrame {
         computadora.setVisible(true);
     }//GEN-LAST:event_btnComputadoraActionPerformed
 
+
     private void btnArcadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArcadeActionPerformed
         // TODO add your handling code here:
         arcade.setVisible(true);
@@ -170,7 +183,7 @@ public class GUICobro extends javax.swing.JFrame {
 
     private void btnRVirtualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRVirtualActionPerformed
         // TODO add your handling code here:
-        equipoRealidadVirtual.setVisible(true);
+        equipoRVirtual.setVisible(true);
     }//GEN-LAST:event_btnRVirtualActionPerformed
 
     /**
@@ -198,6 +211,7 @@ public class GUICobro extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(GUICobro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */

@@ -17,6 +17,7 @@ public class FmrMenu extends javax.swing.JFrame {
     public FmrMenu() {
         initComponents();
         cobro=new GUICobro();
+        //this.setExtendedState(MAXIMIZED_BOTH);
         
     }
 
