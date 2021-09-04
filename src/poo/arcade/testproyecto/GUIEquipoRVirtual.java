@@ -6,18 +6,21 @@
 package poo.arcade.testproyecto;
 
 import javax.swing.JOptionPane;
-
+import poo.clases.proyecto.EquipoRealidadVirtual;
 /**
  *
  * @author Milton
  */
 public class GUIEquipoRVirtual extends javax.swing.JFrame {
-
+    EquipoRealidadVirtual equipoRV;
+    private double cobro;
+    
     /**
      * Creates new form GUIEquipoRVirtual
      */
     public GUIEquipoRVirtual() {
         initComponents();
+        btnGuardarCobro.setEnabled(false);
     }
 
     /**
@@ -180,7 +183,29 @@ public class GUIEquipoRVirtual extends javax.swing.JFrame {
             }
         });
     }
-
+    
+    public boolean llenos(){
+        if(cmbTipoSimulacion.getSelectedIndex()!=-1&&cmbEquipoVirtual.getSelectedIndex()!=-1
+                ){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public void llimpiar(){
+    cmbTipoSimulacion.setSelectedIndex(-1);
+    cmbEquipoVirtual.setSelectedIndex(-1);
+    }    
+    public void bloquearCampos(){
+        cmbTipoSimulacion.setEnabled(false);
+        cmbEquipoVirtual.setEnabled(false);
+    }    
+    
+    public void desbloquearCampos(){
+        cmbTipoSimulacion.setEnabled(true);
+        cmbEquipoVirtual.setEnabled(true);
+    }    
+        
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCalcularpago;
     private javax.swing.JButton btnCancelarCobro;
