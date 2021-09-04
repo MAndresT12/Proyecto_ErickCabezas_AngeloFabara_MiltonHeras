@@ -109,6 +109,9 @@
           <Image iconType="3" name="/Iconos/augmentedreality-15_111400.png"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRVirtualActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnArcade">
       <Properties>
@@ -116,6 +119,9 @@
           <Image iconType="3" name="/Iconos/Galaga_Arcade_icon-icons.com_75284.png"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnArcadeActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnComputadora">
       <Properties>
@@ -123,6 +129,9 @@
           <Image iconType="3" name="/Iconos/computer_84314.png"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnComputadoraActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnConsola">
       <Properties>

@@ -38,8 +38,6 @@ public class GUIComputadora extends javax.swing.JFrame {
         btnGuardarCobro = new javax.swing.JButton();
         btnCancelarCobro = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Computadora"));
 
         cmbComputasoras.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Computadora Gamer", "Computadora Oficina" }));

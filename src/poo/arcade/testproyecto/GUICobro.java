@@ -11,12 +11,18 @@ package poo.arcade.testproyecto;
  */
 public class GUICobro extends javax.swing.JFrame {
  GUIConsola consola;
+ GUIComputadora computadora;
+ GUIArcade arcade;
+ GUIEquipoRVirtual equipoRealidadVirtual;
     /**
      * Creates new form GUICobro
      */
     public GUICobro() {
         initComponents();
         consola=new GUIConsola();
+        computadora = new GUIComputadora();
+        arcade = new GUIArcade();
+        equipoRealidadVirtual = new GUIEquipoRVirtual();
     }
 
     /**
@@ -41,10 +47,25 @@ public class GUICobro extends javax.swing.JFrame {
         setTitle("Cobro");
 
         btnRVirtual.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/augmentedreality-15_111400.png"))); // NOI18N
+        btnRVirtual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRVirtualActionPerformed(evt);
+            }
+        });
 
         btnArcade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/Galaga_Arcade_icon-icons.com_75284.png"))); // NOI18N
+        btnArcade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnArcadeActionPerformed(evt);
+            }
+        });
 
         btnComputadora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/computer_84314.png"))); // NOI18N
+        btnComputadora.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnComputadoraActionPerformed(evt);
+            }
+        });
 
         btnConsola.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/Super_TES_icon-icons.com_66600.png"))); // NOI18N
         btnConsola.addActionListener(new java.awt.event.ActionListener() {
@@ -136,6 +157,21 @@ public class GUICobro extends javax.swing.JFrame {
         // TODO add your handling code here:
         consola.setVisible(true);
     }//GEN-LAST:event_btnConsolaActionPerformed
+
+    private void btnComputadoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComputadoraActionPerformed
+        // TODO add your handling code here:
+        computadora.setVisible(true);
+    }//GEN-LAST:event_btnComputadoraActionPerformed
+
+    private void btnArcadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArcadeActionPerformed
+        // TODO add your handling code here:
+        arcade.setVisible(true);
+    }//GEN-LAST:event_btnArcadeActionPerformed
+
+    private void btnRVirtualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRVirtualActionPerformed
+        // TODO add your handling code here:
+        equipoRealidadVirtual.setVisible(true);
+    }//GEN-LAST:event_btnRVirtualActionPerformed
 
     /**
      * @param args the command line arguments

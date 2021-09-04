@@ -39,8 +39,6 @@ public class GUIEquipoRVirtual extends javax.swing.JFrame {
         btnGuardarCobro = new javax.swing.JButton();
         btnCancelarCobro = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Equipo Realidad Virtual"));
 
         cmbEquipoVirtual.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Valve Index", "Oculus Rift", "HTC Vive", "Oculus Go" }));

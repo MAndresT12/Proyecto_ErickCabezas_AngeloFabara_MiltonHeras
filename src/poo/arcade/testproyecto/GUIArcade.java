@@ -37,8 +37,6 @@ public class GUIArcade extends javax.swing.JFrame {
         btnGuardarCobro = new javax.swing.JButton();
         btnCancelarCobro = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         cmbArcade.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arcade deportivo", "Arcade carreras", "Arcade simulación", "Arcade acción", "Arcade clasico " }));
         cmbArcade.setSelectedIndex(-1);
 
