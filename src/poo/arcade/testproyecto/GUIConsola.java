@@ -36,8 +36,6 @@ public class GUIConsola extends javax.swing.JFrame {
         btnGuardarCobro = new javax.swing.JButton();
         btnCancelarCobro = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         lblConsola.setText("Consola:");
 
         cmbConsola.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Xbox One", "Xbox Series x", "Wi", "Play4", "Play5" }));

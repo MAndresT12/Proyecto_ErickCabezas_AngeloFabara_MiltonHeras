@@ -10,12 +10,13 @@ package poo.arcade.testproyecto;
  * @author erick cabezas
  */
 public class GUICobro extends javax.swing.JFrame {
-
+ GUIConsola consola;
     /**
      * Creates new form GUICobro
      */
     public GUICobro() {
         initComponents();
+        consola=new GUIConsola();
     }
 
     /**
@@ -37,7 +38,6 @@ public class GUICobro extends javax.swing.JFrame {
         lblEquipo = new javax.swing.JLabel();
         lblRealidadVirtual = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cobro");
 
         btnRVirtual.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/augmentedreality-15_111400.png"))); // NOI18N
@@ -47,6 +47,11 @@ public class GUICobro extends javax.swing.JFrame {
         btnComputadora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/computer_84314.png"))); // NOI18N
 
         btnConsola.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/Super_TES_icon-icons.com_66600.png"))); // NOI18N
+        btnConsola.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsolaActionPerformed(evt);
+            }
+        });
 
         lblConsola.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblConsola.setText("Consola:");
@@ -126,6 +131,11 @@ public class GUICobro extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnConsolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsolaActionPerformed
+        // TODO add your handling code here:
+        consola.setVisible(true);
+    }//GEN-LAST:event_btnConsolaActionPerformed
 
     /**
      * @param args the command line arguments

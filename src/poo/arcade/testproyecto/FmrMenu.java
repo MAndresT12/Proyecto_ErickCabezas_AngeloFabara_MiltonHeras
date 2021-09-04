@@ -10,12 +10,13 @@ package poo.arcade.testproyecto;
  * @author erick cabezas
  */
 public class FmrMenu extends javax.swing.JFrame {
-    
+    GUICobro cobro;
     /**
      * Creates new form FmrMenu
      */
     public FmrMenu() {
         initComponents();
+        cobro=new GUICobro();
         
     }
 
@@ -92,6 +93,7 @@ public class FmrMenu extends javax.swing.JFrame {
 
     private void btnCobrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCobrarActionPerformed
         // TODO add your handling code here:
+        cobro.setVisible(true);
         
         
     }//GEN-LAST:event_btnCobrarActionPerformed
