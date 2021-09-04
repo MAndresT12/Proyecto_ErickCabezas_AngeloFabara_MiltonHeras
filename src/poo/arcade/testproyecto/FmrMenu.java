@@ -10,11 +10,13 @@ package poo.arcade.testproyecto;
  * @author erick cabezas
  */
 public class FmrMenu extends javax.swing.JFrame {
+    
     /**
      * Creates new form FmrMenu
      */
     public FmrMenu() {
         initComponents();
+        
     }
 
     /**
