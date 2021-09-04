@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo.clases.proyecto;
+package poo.arcade.testproyecto;
 
 /**
  *
@@ -32,7 +32,7 @@ public class FmrMenu extends javax.swing.JFrame {
         lblCuenta = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Menu");
+        setTitle("Menu Prinsipal");
 
         btnConfiguracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/payment_tax_invoice_calculator_icon_188745.png"))); // NOI18N
 
