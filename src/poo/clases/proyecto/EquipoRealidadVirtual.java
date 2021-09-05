@@ -14,7 +14,7 @@ public class EquipoRealidadVirtual extends Maquina{
     private double valorJuegoRV;
     private String tipoDeSimulacion;
     
-    public void setTipoDeConsola(String tipoDeEquipoRV) {
+    public void setTipoDeEquipoRV(String tipoDeEquipoRV) {
         this.tipoDeEquipoRV = tipoDeEquipoRV;
         if("Nintendo Labo VR".equals(this.tipoDeEquipoRV)){
             this.valorPorHora =4;
@@ -41,7 +41,7 @@ public class EquipoRealidadVirtual extends Maquina{
         if("Shooter".equals(this.tipoDeSimulacion)){
             this.valorJuegoRV =1.50;
         }
-        if("Visualizacion de entornos".equals(this.tipoDeSimulacion)){
+        if("Visualización de entornos".equals(this.tipoDeSimulacion)){
             this.valorJuegoRV =0.50;
         }     
         if("Patinaje".equals(this.tipoDeSimulacion)){
