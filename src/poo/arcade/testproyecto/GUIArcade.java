@@ -95,9 +95,9 @@ public class GUIArcade extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(116, 116, 116)
                 .addComponent(lblArcade)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cmbArcade, 0, 155, Short.MAX_VALUE)
-                .addGap(114, 114, 114))
+                .addGap(108, 108, 108))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -112,14 +112,15 @@ public class GUIArcade extends javax.swing.JFrame {
                                 .addComponent(rbt1))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(lblHorasAlquiladas)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGap(18, 18, 18)
                                 .addComponent(txtHorasAlquiladas, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(btnCalcularpago)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnGuardarCobro)))
-                .addGap(30, 30, 30)
+                        .addComponent(btnGuardarCobro)
+                        .addGap(4, 4, 4)))
+                .addGap(26, 26, 26)
                 .addComponent(btnCancelarCobro)
                 .addGap(28, 28, 28))
         );
@@ -185,15 +186,15 @@ public class GUIArcade extends javax.swing.JFrame {
                     arcade.setNumJugadores(2);
                 }
                 cobro=arcade.calcularPago();
-                JOptionPane.showMessageDialog(rootPane,"valor a cobrar: "+cobro+"$"
+                JOptionPane.showMessageDialog(rootPane,"Valor a cobrar: "+cobro+"$"
                            ,"Cobro",JOptionPane.INFORMATION_MESSAGE);
                 btnGuardarCobro.setEnabled(true);  
             }else{
-                JOptionPane.showMessageDialog(rootPane,"llenar todos los campos","ERROR",JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane,"Llenar todos los campos","ERROR",JOptionPane.ERROR_MESSAGE);
             }
             
         }catch(NumberFormatException nfe){
-            JOptionPane.showMessageDialog(rootPane,"ingresar numeros eteros en Horas","ERROR",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane,"Ingresar numeros enteros en Horas","ERROR",JOptionPane.ERROR_MESSAGE);
         }catch(NullPointerException npe){
             JOptionPane.showMessageDialog(rootPane,"No se calculo el cobro","ERROR",JOptionPane.ERROR_MESSAGE);
         }catch(Exception e){
@@ -209,7 +210,6 @@ public class GUIArcade extends javax.swing.JFrame {
         llimpiar();
         btnGuardarCobro.setEnabled(false);
         desbloquearCampos();
-        JOptionPane.showMessageDialog(rootPane,"cobro total  "+GUICobro.getCobroTotal()+"$","ERROR",JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_btnGuardarCobroActionPerformed
 
     private void btnCancelarCobroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarCobroActionPerformed
