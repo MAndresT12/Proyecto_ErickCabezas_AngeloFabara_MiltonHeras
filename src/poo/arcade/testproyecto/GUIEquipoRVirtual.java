@@ -172,7 +172,7 @@ public class GUIEquipoRVirtual extends javax.swing.JFrame {
                 String tipoDeSimulacion= (String) cmbTipoSimulacion.getSelectedItem();
                 bloquearCampos();
                 equipoRV=new EquipoRealidadVirtual();
-                equipoRV.setTipoDeEquipoRV(tipoDeEquipoVR);
+                equipoRV.setTipoDeConsola(tipoDeEquipoVR);
                 equipoRV.setTipoDeSimulacion(tipoDeSimulacion);
                 equipoRV.setHorasDealquiler(horasAlquiladas);  
                 cobro=equipoRV.calcularPago();
