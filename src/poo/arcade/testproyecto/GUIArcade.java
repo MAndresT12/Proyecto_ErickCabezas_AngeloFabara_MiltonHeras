@@ -104,16 +104,15 @@ public class GUIArcade extends javax.swing.JFrame {
                         .addContainerGap(116, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(113, 113, 113)
-                                .addComponent(rbt2))
+                                .addComponent(lblHorasAlquiladas)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtHorasAlquiladas, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(lblNumJugadores)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(rbt1))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(lblHorasAlquiladas)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtHorasAlquiladas, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(rbt2)
+                                    .addComponent(rbt1)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(btnCalcularpago)
@@ -194,9 +193,9 @@ public class GUIArcade extends javax.swing.JFrame {
             }
             
         }catch(NumberFormatException nfe){
-            JOptionPane.showMessageDialog(rootPane,"Ingresar numeros enteros en Horas","ERROR",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane,"Ingresar números enteros en Horas","ERROR",JOptionPane.ERROR_MESSAGE);
         }catch(NullPointerException npe){
-            JOptionPane.showMessageDialog(rootPane,"No se calculo el cobro","ERROR",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane,"No se calculó el cobro","ERROR",JOptionPane.ERROR_MESSAGE);
         }catch(Exception e){
             JOptionPane.showMessageDialog(rootPane,"otro error"+e.toString(),"ERROR",JOptionPane.ERROR_MESSAGE);
         }

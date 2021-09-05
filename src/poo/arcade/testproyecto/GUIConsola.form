@@ -20,10 +20,10 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-              <Component id="jPanel1" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -39,6 +39,13 @@
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Consola de videojuegos"/>
+          </Border>
+        </Property>
+      </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
@@ -47,7 +54,7 @@
                   <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
                   <Component id="lblConsola" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="cmbConsola" pref="196" max="32767" attributes="0"/>
+                  <Component id="cmbConsola" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="167" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
@@ -73,7 +80,7 @@
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="70" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -117,10 +124,10 @@
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="5">
                 <StringItem index="0" value="Xbox One"/>
-                <StringItem index="1" value="Xbox Series x"/>
-                <StringItem index="2" value="Wi"/>
-                <StringItem index="3" value="Play4"/>
-                <StringItem index="4" value="Play5"/>
+                <StringItem index="1" value="Xbox Series X"/>
+                <StringItem index="2" value="Wii"/>
+                <StringItem index="3" value="Playstation 4"/>
+                <StringItem index="4" value="Playstation 5"/>
               </StringArray>
             </Property>
             <Property name="selectedIndex" type="int" value="-1"/>

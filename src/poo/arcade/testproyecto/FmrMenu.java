@@ -28,7 +28,7 @@ public class FmrMenu extends javax.swing.JFrame {
         equiposAlquilados=new ArrayList<>();
         dtmModelo.addColumn("Equipo");
         dtmModelo.addColumn("Horas Alquiladas");
-        dtmModelo.addColumn("Valor por Hora");
+        dtmModelo.addColumn("Valor Por Hora");
         dtmModelo.addColumn("Valor Cobrado");
         tblCuenta.setModel(dtmModelo);
         
@@ -71,7 +71,7 @@ public class FmrMenu extends javax.swing.JFrame {
         });
 
         lblCobrar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lblCobrar.setText("cobrar:");
+        lblCobrar.setText("Cobrar:");
 
         lblCuenta.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblCuenta.setText("Cuenta:");

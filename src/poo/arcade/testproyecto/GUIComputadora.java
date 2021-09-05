@@ -161,9 +161,9 @@ GUICobro cobroT;
             }
             
         }catch(NumberFormatException nfe){
-            JOptionPane.showMessageDialog(rootPane,"Ingresar numeros enteros en Horas","ERROR",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane,"Ingresar números enteros en horas","ERROR",JOptionPane.ERROR_MESSAGE);
         }catch(NullPointerException npe){
-            JOptionPane.showMessageDialog(rootPane,"No se calculo el cobro","ERROR",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane,"No se calculó el cobro","ERROR",JOptionPane.ERROR_MESSAGE);
         }catch(Exception e){
             JOptionPane.showMessageDialog(rootPane,"otro error"+e.toString(),"ERROR",JOptionPane.ERROR_MESSAGE);
         }

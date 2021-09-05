@@ -22,7 +22,7 @@ public class ConsolaDeVideojuego extends Maquina {
         if("Xbox Series X".equals(this.tipoDeConsola)){
             this.valorPorHora =2.50;
         }
-        if("Wii ".equals(this.tipoDeConsola)){
+        if("Wii".equals(this.tipoDeConsola)){
             this.valorPorHora =1.25;
         }     
         if("Playstation 4".equals(this.tipoDeConsola)){
@@ -76,7 +76,7 @@ public class ConsolaDeVideojuego extends Maquina {
     
     @Override
     public Double calcularPago() {
-        this.cobrado = (this.numMandos*this.valorPorMando)+(valorPorHora*horasDealquiler);
+        this.cobrado = (this.valorPorMando)+(valorPorHora*horasDealquiler);
         return this.cobrado;
     }
     

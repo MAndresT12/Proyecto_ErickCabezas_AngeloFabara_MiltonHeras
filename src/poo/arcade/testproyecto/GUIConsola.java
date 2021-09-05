@@ -45,9 +45,11 @@ private double cobro;
         txtHorasAlquiladas = new javax.swing.JTextField();
         lblHorasAlquiladas = new javax.swing.JLabel();
 
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Consola de videojuegos"));
+
         lblConsola.setText("Consola:");
 
-        cmbConsola.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Xbox One", "Xbox Series x", "Wi", "Play4", "Play5" }));
+        cmbConsola.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Xbox One", "Xbox Series X", "Wii", "Playstation 4", "Playstation 5" }));
         cmbConsola.setSelectedIndex(-1);
 
         lblNumMandos.setText("Numero de mandos:");
@@ -86,7 +88,7 @@ private double cobro;
                 .addGap(132, 132, 132)
                 .addComponent(lblConsola)
                 .addGap(18, 18, 18)
-                .addComponent(cmbConsola, 0, 196, Short.MAX_VALUE)
+                .addComponent(cmbConsola, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(167, 167, 167))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -106,7 +108,7 @@ private double cobro;
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtHorasAlquiladas, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cmbMandos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -136,9 +138,9 @@ private double cobro;
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -172,9 +174,9 @@ private double cobro;
             }
             
         }catch(NumberFormatException nfe){
-            JOptionPane.showMessageDialog(rootPane,"Ingresar numeros enteros en Horas","ERROR",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane,"Ingresar números enteros en horas","ERROR",JOptionPane.ERROR_MESSAGE);
         }catch(NullPointerException npe){
-            JOptionPane.showMessageDialog(rootPane,"No se calculo el cobro","ERROR",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane,"No se calculó el cobro","ERROR",JOptionPane.ERROR_MESSAGE);
         }catch(Exception e){
             JOptionPane.showMessageDialog(rootPane,"otro error"+e.toString(),"ERROR",JOptionPane.ERROR_MESSAGE);
         }
@@ -252,7 +254,7 @@ private double cobro;
     }
     public void desbloquearCampos(){
         cmbConsola.setEnabled(true);
-        cmbMandos.setEnabled(false);
+        cmbMandos.setEnabled(true);
         txtHorasAlquiladas.setEnabled(true);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
