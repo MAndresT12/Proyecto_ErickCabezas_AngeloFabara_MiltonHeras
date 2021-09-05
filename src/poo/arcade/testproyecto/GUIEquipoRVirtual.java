@@ -176,21 +176,19 @@ public class GUIEquipoRVirtual extends javax.swing.JFrame {
                 equipoRV.setTipoDeSimulacion(tipoDeSimulacion);
                 equipoRV.setHorasDealquiler(horasAlquiladas);  
                 cobro=equipoRV.calcularPago();
-                JOptionPane.showMessageDialog(rootPane,"valor a cobrar: "+cobro+"$"
+                JOptionPane.showMessageDialog(rootPane,"Valor a cobrar: "+cobro+"$"
                            ,"Cobro",JOptionPane.INFORMATION_MESSAGE);
                 btnGuardarCobro.setEnabled(true);  
             }else{
-                JOptionPane.showMessageDialog(rootPane,"llenar todos los campos","ERROR",JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane,"Llenar todos los campos","ERROR",JOptionPane.ERROR_MESSAGE);
             }
-            
-            
         }catch(NumberFormatException nfe){
-            JOptionPane.showMessageDialog(rootPane,"ingresar numeros en CI","ERROR",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane,"Ingresar numeros enteros en Horas","ERROR",JOptionPane.ERROR_MESSAGE);
         }catch(NullPointerException npe){
-            JOptionPane.showMessageDialog(rootPane,"No se guardo el Estudiante","ERROR",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane,"No se calculo el cobro","ERROR",JOptionPane.ERROR_MESSAGE);
         }catch(Exception e){
-            JOptionPane.showMessageDialog(rootPane,"otro erros"+e.toString(),"ERROR",JOptionPane.ERROR_MESSAGE);
-        }
+            JOptionPane.showMessageDialog(rootPane,"otro error"+e.toString(),"ERROR",JOptionPane.ERROR_MESSAGE);
+        }            
     }//GEN-LAST:event_btnCalcularpagoActionPerformed
 
     private void btnGuardarCobroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarCobroActionPerformed
@@ -199,8 +197,7 @@ public class GUIEquipoRVirtual extends javax.swing.JFrame {
         FmrMenu.equiposAlquilados.add(equipoRV);
         llimpiar();
         btnGuardarCobro.setEnabled(false);
-        desbloquearCampos();
-        JOptionPane.showMessageDialog(rootPane,"cobro total  "+GUICobro.getCobroTotal()+"$","ERROR",JOptionPane.INFORMATION_MESSAGE);            
+        desbloquearCampos();        
     }//GEN-LAST:event_btnGuardarCobroActionPerformed
 
     private void btnCancelarCobroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarCobroActionPerformed
