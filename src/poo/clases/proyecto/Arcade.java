@@ -33,10 +33,15 @@ public class Arcade extends Maquina{
        
     }
 
+    public String getTipoDeArcade() {
+        return tipoDeArcade;
+    }
+   
     public void setNumJugadores(int numJugadores) {
         this.numJugadores = numJugadores;
     }
 
+    @Override
     public int getHorasDealquiler() {
         return horasDealquiler;
     }
@@ -45,8 +50,19 @@ public class Arcade extends Maquina{
         this.horasDealquiler = horasDealquiler;
     }
 
+    @Override
     public double getValorPorHora() {
         return valorPorHora;
+    }
+
+    @Override
+    public double getCobrado() {
+        return cobrado;
+    }
+
+    @Override
+    public String toString() {
+        return this.tipoDeArcade;
     }
     
     @Override

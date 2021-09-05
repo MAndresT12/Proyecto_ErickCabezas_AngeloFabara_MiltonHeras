@@ -49,6 +49,7 @@ public class ConsolaDeVideojuego extends Maquina {
         }        
     }
 
+    @Override
     public int getHorasDealquiler() {
         return horasDealquiler;
     }
@@ -57,10 +58,21 @@ public class ConsolaDeVideojuego extends Maquina {
         this.horasDealquiler = horasDealquiler;
     }
 
+    @Override
     public double getValorPorHora() {
         return valorPorHora;
     }
 
+    @Override
+    public double getCobrado() {
+        return cobrado;
+    }
+
+    @Override
+    public String toString() {
+        return this.tipoDeConsola;
+    }
+    
     
     @Override
     public Double calcularPago() {

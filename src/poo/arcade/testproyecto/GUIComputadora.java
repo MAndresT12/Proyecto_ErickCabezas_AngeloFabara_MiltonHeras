@@ -172,6 +172,7 @@ GUICobro cobroT;
     private void btnGuardarCobroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarCobroActionPerformed
         // TODO add your handling code here:
         GUICobro.setCobroTotal(cobro);
+        FmrMenu.equiposAlquilados.add(computadora);
         llimpiar();
         btnGuardarCobro.setEnabled(false);
         desbloquearCampos();

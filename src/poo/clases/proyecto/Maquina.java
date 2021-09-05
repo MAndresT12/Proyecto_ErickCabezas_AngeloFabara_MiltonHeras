@@ -14,6 +14,19 @@ public abstract class  Maquina {
     protected int horasDealquiler;
     protected double valorPorHora;
     protected double cobrado;
+
+    public int getHorasDealquiler() {
+        return horasDealquiler;
+    }
+
+    public double getValorPorHora() {
+        return valorPorHora;
+    }
+
+    public double getCobrado() {
+        return cobrado;
+    }
+    
  
     public abstract Double calcularPago();
 }

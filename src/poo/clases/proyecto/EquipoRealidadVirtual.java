@@ -48,13 +48,21 @@ public class EquipoRealidadVirtual extends Maquina{
             this.valorJuegoRV =2.25;
         }          
     }
+    @Override
     public int getHorasDealquiler() {
         return horasDealquiler;
     }
 
+    @Override
     public double getValorPorHora() {
         return valorPorHora;
     }
+
+    @Override
+    public double getCobrado() {
+        return cobrado;
+    }
+    
     
     public void setHorasDealquiler(int horasDealquiler) {
         this.horasDealquiler = horasDealquiler;
@@ -66,4 +74,10 @@ public class EquipoRealidadVirtual extends Maquina{
         this.cobrado = this.valorJuegoRV+(this.horasDealquiler*this.valorPorHora);
         return this.cobrado;
     }
+
+    @Override
+    public String toString() {
+        return this.tipoDeEquipoRV;
+    }
+    
 }

@@ -26,6 +26,7 @@ public class Computadora extends Maquina{
         return tipoDeComputadora;
     }
 
+    @Override
     public int getHorasDealquiler() {
         return horasDealquiler;
     }
@@ -34,6 +35,7 @@ public class Computadora extends Maquina{
         this.horasDealquiler = horasDealquiler;
     }
 
+    @Override
     public double getValorPorHora() {
         return valorPorHora;
     }
@@ -41,7 +43,18 @@ public class Computadora extends Maquina{
     public void setValorPorHora(double valorPorHora) {
         this.valorPorHora = valorPorHora;
     }
-     
+
+    @Override
+    public double getCobrado() {
+        return cobrado;
+    }
+
+    @Override
+    public String toString() {
+        return this.tipoDeComputadora;
+    }
+    
+    
     @Override
     public Double calcularPago() {
         this.cobrado=valorPorHora*horasDealquiler;
