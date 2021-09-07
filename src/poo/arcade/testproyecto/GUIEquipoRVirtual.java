@@ -46,20 +46,32 @@ public class GUIEquipoRVirtual extends javax.swing.JFrame {
         btnCancelarCobro = new javax.swing.JButton();
         lblHorasAlquiladas = new javax.swing.JLabel();
         txtHorasAlquiladas = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+
+        setTitle("Equipo de Realidad Virtual");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Equipo Realidad Virtual"));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cmbEquipoVirtual.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nintendo Labo VR", "Valve Index", "Oculus Rift", "HTC Vive", "Oculus Go" }));
         cmbEquipoVirtual.setSelectedIndex(-1);
+        jPanel1.add(cmbEquipoVirtual, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, 155, -1));
 
+        lblEquipo.setForeground(new java.awt.Color(255, 255, 255));
         lblEquipo.setText("Equipo");
+        jPanel1.add(lblEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, -1, -1));
 
+        lblRealidadVirtual.setForeground(new java.awt.Color(255, 255, 255));
         lblRealidadVirtual.setText("realidad Virtual:");
+        jPanel1.add(lblRealidadVirtual, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, -1, 20));
 
-        lblSimulacion.setText("Tipo de simulacion:");
+        lblSimulacion.setForeground(new java.awt.Color(255, 255, 255));
+        lblSimulacion.setText("Tipo de simulación:");
+        jPanel1.add(lblSimulacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, -1, 20));
 
         cmbTipoSimulacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Conduccion", "Shooter", "Visualización de entornos", "Patinaje" }));
         cmbTipoSimulacion.setSelectedIndex(-1);
+        jPanel1.add(cmbTipoSimulacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 155, -1));
 
         btnCalcularpago.setText("Calcular Cobro");
         btnCalcularpago.addActionListener(new java.awt.event.ActionListener() {
@@ -67,6 +79,7 @@ public class GUIEquipoRVirtual extends javax.swing.JFrame {
                 btnCalcularpagoActionPerformed(evt);
             }
         });
+        jPanel1.add(btnCalcularpago, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
 
         btnGuardarCobro.setText("Guardar Cobro");
         btnGuardarCobro.addActionListener(new java.awt.event.ActionListener() {
@@ -74,6 +87,7 @@ public class GUIEquipoRVirtual extends javax.swing.JFrame {
                 btnGuardarCobroActionPerformed(evt);
             }
         });
+        jPanel1.add(btnGuardarCobro, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, -1, -1));
 
         btnCancelarCobro.setText("Cancelar Cobro");
         btnCancelarCobro.addActionListener(new java.awt.event.ActionListener() {
@@ -81,77 +95,25 @@ public class GUIEquipoRVirtual extends javax.swing.JFrame {
                 btnCancelarCobroActionPerformed(evt);
             }
         });
+        jPanel1.add(btnCancelarCobro, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, -1, -1));
 
+        lblHorasAlquiladas.setForeground(new java.awt.Color(255, 255, 255));
         lblHorasAlquiladas.setText("Horas alquiladas:");
+        jPanel1.add(lblHorasAlquiladas, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, -1, 20));
+        jPanel1.add(txtHorasAlquiladas, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 48, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(83, 83, 83)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(lblRealidadVirtual)
-                        .addComponent(lblSimulacion)
-                        .addComponent(lblEquipo)
-                        .addComponent(lblHorasAlquiladas))
-                    .addComponent(btnCalcularpago))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtHorasAlquiladas, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cmbTipoSimulacion, 0, 155, Short.MAX_VALUE)
-                            .addComponent(cmbEquipoVirtual, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(btnGuardarCobro)
-                        .addGap(34, 34, 34)
-                        .addComponent(btnCancelarCobro)))
-                .addContainerGap(72, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(cmbEquipoVirtual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(cmbTipoSimulacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(lblEquipo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblRealidadVirtual)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblSimulacion)))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtHorasAlquiladas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblHorasAlquiladas))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCalcularpago)
-                    .addComponent(btnGuardarCobro)
-                    .addComponent(btnCancelarCobro))
-                .addContainerGap(25, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/background/LogoAZMarco.jpg"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -265,6 +227,7 @@ public class GUIEquipoRVirtual extends javax.swing.JFrame {
     private javax.swing.JButton btnGuardarCobro;
     private javax.swing.JComboBox<String> cmbEquipoVirtual;
     private javax.swing.JComboBox<String> cmbTipoSimulacion;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblEquipo;
     private javax.swing.JLabel lblHorasAlquiladas;

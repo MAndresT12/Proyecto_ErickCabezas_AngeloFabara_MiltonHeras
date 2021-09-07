@@ -26,7 +26,8 @@ public class FmrMenu extends javax.swing.JFrame {
         initComponents();
         pnlCuenta=new PnlCuenta();
         pnlCobro=new PnlCobro();
-        this.setExtendedState(MAXIMIZED_BOTH);
+        this.setResizable(false);
+        this.setLocationRelativeTo(null);
         equiposAlquilados=new ArrayList<>();
     }
 
@@ -45,6 +46,8 @@ public class FmrMenu extends javax.swing.JFrame {
         lblCuenta = new javax.swing.JLabel();
         btnCuneta = new javax.swing.JButton();
         lblMenu = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         pnl2 = new javax.swing.JPanel();
         lblPresentacion = new javax.swing.JLabel();
 
@@ -76,47 +79,54 @@ public class FmrMenu extends javax.swing.JFrame {
         lblMenu.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lblMenu.setText("Menu");
 
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/background/MiniLogo.png"))); // NOI18N
+
         javax.swing.GroupLayout pnl1Layout = new javax.swing.GroupLayout(pnl1);
         pnl1.setLayout(pnl1Layout);
         pnl1Layout.setHorizontalGroup(
             pnl1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(pnl1Layout.createSequentialGroup()
-                .addGroup(pnl1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnl1Layout.createSequentialGroup()
-                        .addGap(77, 77, 77)
-                        .addComponent(lblCobrar)
-                        .addGap(7, 7, 7))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(lblCuenta)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                .addGap(70, 70, 70)
+                .addGroup(pnl1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblCuenta)
+                    .addComponent(lblCobrar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnl1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnCuneta, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCobrar, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblMenu))
-                .addContainerGap(80, Short.MAX_VALUE))
+                    .addComponent(lblMenu)
+                    .addComponent(btnCobrar, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl1Layout.createSequentialGroup()
+                .addContainerGap(85, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(77, 77, 77))
         );
         pnl1Layout.setVerticalGroup(
             pnl1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl1Layout.createSequentialGroup()
-                .addGroup(pnl1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(pnl1Layout.createSequentialGroup()
-                        .addGap(122, 122, 122)
-                        .addComponent(lblCobrar)
-                        .addGap(41, 41, 41))
-                    .addGroup(pnl1Layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(lblMenu)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnCobrar)))
+                .addGap(38, 38, 38)
+                .addComponent(lblMenu)
                 .addGroup(pnl1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnl1Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(btnCuneta, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(61, 61, 61)
+                        .addComponent(btnCobrar))
                     .addGroup(pnl1Layout.createSequentialGroup()
                         .addGap(85, 85, 85)
-                        .addComponent(lblCuenta)))
-                .addContainerGap(226, Short.MAX_VALUE))
+                        .addComponent(lblCobrar)))
+                .addGroup(pnl1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl1Layout.createSequentialGroup()
+                        .addGap(125, 125, 125)
+                        .addComponent(lblCuenta))
+                    .addGroup(pnl1Layout.createSequentialGroup()
+                        .addGap(104, 104, 104)
+                        .addComponent(btnCuneta, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(52, 52, 52)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pnl2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 204, 204)));
@@ -127,17 +137,17 @@ public class FmrMenu extends javax.swing.JFrame {
         pnl2.setLayout(pnl2Layout);
         pnl2Layout.setHorizontalGroup(
             pnl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl2Layout.createSequentialGroup()
-                .addGap(138, 138, 138)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl2Layout.createSequentialGroup()
+                .addContainerGap(150, Short.MAX_VALUE)
                 .addComponent(lblPresentacion)
-                .addContainerGap(301, Short.MAX_VALUE))
+                .addGap(149, 149, 149))
         );
         pnl2Layout.setVerticalGroup(
             pnl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl2Layout.createSequentialGroup()
-                .addGap(58, 58, 58)
+                .addGap(142, 142, 142)
                 .addComponent(lblPresentacion)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(154, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -227,6 +237,8 @@ public class FmrMenu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCobrar;
     private javax.swing.JButton btnCuneta;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblCobrar;
     private javax.swing.JLabel lblCuenta;
     private javax.swing.JLabel lblMenu;

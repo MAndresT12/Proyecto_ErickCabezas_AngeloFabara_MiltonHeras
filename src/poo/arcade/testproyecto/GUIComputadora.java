@@ -45,8 +45,12 @@ private double cobro;
         btnCalcularpago = new javax.swing.JButton();
         btnGuardarCobro = new javax.swing.JButton();
         btnCancelarCobro = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+
+        setTitle("Computadora");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Computadora"));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cmbComputasoras.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Computadora Gamer", "Computadora Oficina" }));
         cmbComputasoras.setSelectedIndex(-1);
@@ -55,10 +59,17 @@ private double cobro;
                 cmbComputasorasActionPerformed(evt);
             }
         });
+        jPanel1.add(cmbComputasoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, 164, -1));
 
-        lblTipoDeComputadora.setText("Tipo De computadora");
+        lblTipoDeComputadora.setBackground(new java.awt.Color(255, 255, 255));
+        lblTipoDeComputadora.setForeground(new java.awt.Color(255, 255, 255));
+        lblTipoDeComputadora.setText("Tipo de computadora:");
+        jPanel1.add(lblTipoDeComputadora, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 70, -1, 20));
 
+        lblHorasAlquiladas.setForeground(new java.awt.Color(255, 255, 255));
         lblHorasAlquiladas.setText("Horas alquiladas:");
+        jPanel1.add(lblHorasAlquiladas, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, -1, 20));
+        jPanel1.add(txtHorasAlquiladas, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, 48, -1));
 
         btnCalcularpago.setText("Calcular Cobro");
         btnCalcularpago.addActionListener(new java.awt.event.ActionListener() {
@@ -66,6 +77,7 @@ private double cobro;
                 btnCalcularpagoActionPerformed(evt);
             }
         });
+        jPanel1.add(btnCalcularpago, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, -1, -1));
 
         btnGuardarCobro.setText("Guardar Cobro");
         btnGuardarCobro.addActionListener(new java.awt.event.ActionListener() {
@@ -73,6 +85,7 @@ private double cobro;
                 btnGuardarCobroActionPerformed(evt);
             }
         });
+        jPanel1.add(btnGuardarCobro, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, -1, -1));
 
         btnCancelarCobro.setText("Cancelar Cobro");
         btnCancelarCobro.addActionListener(new java.awt.event.ActionListener() {
@@ -80,58 +93,20 @@ private double cobro;
                 btnCancelarCobroActionPerformed(evt);
             }
         });
+        jPanel1.add(btnCancelarCobro, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 200, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(77, 77, 77)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblHorasAlquiladas)
-                    .addComponent(lblTipoDeComputadora))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtHorasAlquiladas, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmbComputasoras, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(btnCalcularpago)
-                .addGap(30, 30, 30)
-                .addComponent(btnGuardarCobro)
-                .addGap(30, 30, 30)
-                .addComponent(btnCancelarCobro)
-                .addGap(0, 47, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cmbComputasoras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblTipoDeComputadora))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblHorasAlquiladas)
-                    .addComponent(txtHorasAlquiladas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCalcularpago)
-                    .addComponent(btnGuardarCobro)
-                    .addComponent(btnCancelarCobro))
-                .addContainerGap(40, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/background/LogoAZMarco.jpg"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -245,6 +220,7 @@ public void desbloquearCampos(){
     private javax.swing.JButton btnCancelarCobro;
     private javax.swing.JButton btnGuardarCobro;
     private javax.swing.JComboBox<String> cmbComputasoras;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblHorasAlquiladas;
     private javax.swing.JLabel lblTipoDeComputadora;
