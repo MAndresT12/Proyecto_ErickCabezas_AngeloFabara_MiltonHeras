@@ -22,6 +22,8 @@ public class FmrMenu extends javax.swing.JFrame {
      */
     public FmrMenu() {
         initComponents();
+        this.setResizable(false);
+        this.setLocationRelativeTo(null);
         cobro=new GUICobro();
         //this.setExtendedState(MAXIMIZED_BOTH);
         dtmModelo= new DefaultTableModel(); // inicializamos el modelo de la tabla

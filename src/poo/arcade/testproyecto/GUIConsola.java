@@ -22,6 +22,8 @@ private double cobro;
      */
     public GUIConsola() {
         initComponents();
+        this.setResizable(false);
+        this.setLocationRelativeTo(null);
         btnGuardarCobro.setEnabled(false);
     }
 

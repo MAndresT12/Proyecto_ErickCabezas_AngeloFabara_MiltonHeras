@@ -23,6 +23,8 @@ GUICobro cobroT;
      */
     public GUIComputadora() {
         initComponents();
+        this.setResizable(false);
+        this.setLocationRelativeTo(null);
         btnGuardarCobro.setEnabled(false);
     }
 

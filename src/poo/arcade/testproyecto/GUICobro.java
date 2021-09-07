@@ -30,7 +30,8 @@ public class GUICobro extends javax.swing.JFrame {
      */
     public GUICobro() {
         initComponents();
-        
+        this.setResizable(false);
+        this.setLocationRelativeTo(null);
         consola=new GUIConsola();
         computadora = new GUIComputadora();
         arcade=new GUIArcade();

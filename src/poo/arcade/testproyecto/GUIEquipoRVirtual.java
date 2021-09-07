@@ -21,6 +21,8 @@ public class GUIEquipoRVirtual extends javax.swing.JFrame {
      */
     public GUIEquipoRVirtual() {
         initComponents();
+        this.setResizable(false);
+        this.setLocationRelativeTo(null);
         btnGuardarCobro.setEnabled(false);
     }
 
