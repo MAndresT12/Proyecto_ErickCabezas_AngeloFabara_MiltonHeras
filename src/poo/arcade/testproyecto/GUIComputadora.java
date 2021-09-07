@@ -17,7 +17,7 @@ import poo.clases.proyecto.Computadora;
 public class GUIComputadora extends javax.swing.JFrame {
 Computadora computadora;
 private double cobro;
-GUICobro cobroT;
+
     /**
      * Creates new form GUIComputadora
      */
@@ -92,12 +92,9 @@ GUICobro cobroT;
                     .addComponent(lblTipoDeComputadora))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(cmbComputasoras, 0, 1, Short.MAX_VALUE)
-                        .addGap(151, 151, 151))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(txtHorasAlquiladas, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addComponent(txtHorasAlquiladas, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbComputasoras, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(btnCalcularpago)
@@ -173,7 +170,7 @@ GUICobro cobroT;
 
     private void btnGuardarCobroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarCobroActionPerformed
         // TODO add your handling code here:
-        GUICobro.setCobroTotal(cobro);
+        PnlCobro.setCobroTotal(cobro);
         FmrMenu.equiposAlquilados.add(computadora);
         llimpiar();
         btnGuardarCobro.setEnabled(false);

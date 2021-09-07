@@ -62,10 +62,10 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="cmbTipoSimulacion" min="-2" pref="130" max="-2" attributes="0"/>
-                              <Component id="cmbEquipoVirtual" min="-2" pref="128" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="txtHorasAlquiladas" alignment="0" min="-2" pref="48" max="-2" attributes="0"/>
+                              <Component id="cmbTipoSimulacion" alignment="0" pref="155" max="32767" attributes="0"/>
+                              <Component id="cmbEquipoVirtual" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">

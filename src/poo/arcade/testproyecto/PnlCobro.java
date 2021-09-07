@@ -1,41 +1,38 @@
-package poo.arcade.testproyecto;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+package poo.arcade.testproyecto;
 
 /**
  *
  * @author erick cabezas
  */
-public class GUICobro extends javax.swing.JFrame {
+public class PnlCobro extends javax.swing.JPanel {
  GUIConsola consola;
  GUIComputadora computadora;
  GUIArcade arcade;
  GUIEquipoRVirtual equipoRVirtual;
- 
  private static double cobroTotal;
+    /**
+     * Creates new form pnlCobro
+     */
+    public PnlCobro() {
+        initComponents();
+        consola=new GUIConsola();
+        computadora = new GUIComputadora();
+        arcade=new GUIArcade();
+        equipoRVirtual=new GUIEquipoRVirtual();
+        
+    }
+    
     public static double getCobroTotal() {
         return cobroTotal;
     }
 
     public static void setCobroTotal(double cobro) {
-        GUICobro.cobroTotal += cobro;
-    }
-    /**
-     * Creates new form GUICobro
-     */
-    public GUICobro() {
-        initComponents();
-        this.setResizable(false);
-        this.setLocationRelativeTo(null);
-        consola=new GUIConsola();
-        computadora = new GUIComputadora();
-        arcade=new GUIArcade();
-        equipoRVirtual=new GUIEquipoRVirtual();
+        PnlCobro.cobroTotal += cobro;
     }
 
     /**
@@ -47,38 +44,15 @@ public class GUICobro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnRVirtual = new javax.swing.JButton();
-        btnArcade = new javax.swing.JButton();
-        btnComputadora = new javax.swing.JButton();
         btnConsola = new javax.swing.JButton();
         lblConsola = new javax.swing.JLabel();
         lblComputadora = new javax.swing.JLabel();
         lblArcade = new javax.swing.JLabel();
         lblEquipo = new javax.swing.JLabel();
         lblRealidadVirtual = new javax.swing.JLabel();
-
-        setTitle("Cobro");
-
-        btnRVirtual.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/augmentedreality-15_111400.png"))); // NOI18N
-        btnRVirtual.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRVirtualActionPerformed(evt);
-            }
-        });
-
-        btnArcade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/Galaga_Arcade_icon-icons.com_75284.png"))); // NOI18N
-        btnArcade.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnArcadeActionPerformed(evt);
-            }
-        });
-
-        btnComputadora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/computer_84314.png"))); // NOI18N
-        btnComputadora.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnComputadoraActionPerformed(evt);
-            }
-        });
+        btnRVirtual = new javax.swing.JButton();
+        btnArcade = new javax.swing.JButton();
+        btnComputadora = new javax.swing.JButton();
 
         btnConsola.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/Super_TES_icon-icons.com_66600.png"))); // NOI18N
         btnConsola.addActionListener(new java.awt.event.ActionListener() {
@@ -102,12 +76,33 @@ public class GUICobro extends javax.swing.JFrame {
         lblRealidadVirtual.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblRealidadVirtual.setText("realidad Virtual:");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
+        btnRVirtual.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/augmentedreality-15_111400.png"))); // NOI18N
+        btnRVirtual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRVirtualActionPerformed(evt);
+            }
+        });
+
+        btnArcade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/Galaga_Arcade_icon-icons.com_75284.png"))); // NOI18N
+        btnArcade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnArcadeActionPerformed(evt);
+            }
+        });
+
+        btnComputadora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/computer_84314.png"))); // NOI18N
+        btnComputadora.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnComputadoraActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(132, 132, 132)
+                .addGap(64, 64, 64)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -126,12 +121,12 @@ public class GUICobro extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnRVirtual, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                             .addComponent(btnArcade, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(49, 49, 49)
+                .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(32, 32, 32)
@@ -160,68 +155,31 @@ public class GUICobro extends javax.swing.JFrame {
                         .addComponent(lblEquipo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblRealidadVirtual)))
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
-
-        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnConsolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsolaActionPerformed
         // TODO add your handling code here:
         consola.setVisible(true);
+        
     }//GEN-LAST:event_btnConsolaActionPerformed
-
-    private void btnComputadoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComputadoraActionPerformed
-        // TODO add your handling code here:
-        computadora.setVisible(true);
-    }//GEN-LAST:event_btnComputadoraActionPerformed
-
-
-    private void btnArcadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArcadeActionPerformed
-        // TODO add your handling code here:
-        arcade.setVisible(true);
-    }//GEN-LAST:event_btnArcadeActionPerformed
 
     private void btnRVirtualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRVirtualActionPerformed
         // TODO add your handling code here:
         equipoRVirtual.setVisible(true);
     }//GEN-LAST:event_btnRVirtualActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GUICobro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GUICobro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GUICobro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GUICobro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
+    private void btnArcadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArcadeActionPerformed
+        // TODO add your handling code here:
+        arcade.setVisible(true);
+    }//GEN-LAST:event_btnArcadeActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new GUICobro().setVisible(true);
-            }
-        });
-    }
+    private void btnComputadoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComputadoraActionPerformed
+        // TODO add your handling code here:
+        computadora.setVisible(true);
+    }//GEN-LAST:event_btnComputadoraActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnArcade;

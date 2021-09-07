@@ -21,9 +21,9 @@ public class GUIEquipoRVirtual extends javax.swing.JFrame {
      */
     public GUIEquipoRVirtual() {
         initComponents();
+        btnGuardarCobro.setEnabled(false);
         this.setResizable(false);
         this.setLocationRelativeTo(null);
-        btnGuardarCobro.setEnabled(false);
     }
 
     /**
@@ -100,10 +100,10 @@ public class GUIEquipoRVirtual extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(38, 38, 38)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cmbTipoSimulacion, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cmbEquipoVirtual, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtHorasAlquiladas, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtHorasAlquiladas, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cmbTipoSimulacion, 0, 155, Short.MAX_VALUE)
+                            .addComponent(cmbEquipoVirtual, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addComponent(btnGuardarCobro)
@@ -187,7 +187,7 @@ public class GUIEquipoRVirtual extends javax.swing.JFrame {
 
     private void btnGuardarCobroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarCobroActionPerformed
         // TODO add your handling code here:
-        GUICobro.setCobroTotal(cobro);
+        PnlCobro.setCobroTotal(cobro);
         FmrMenu.equiposAlquilados.add(equipoRV);
         llimpiar();
         btnGuardarCobro.setEnabled(false);

@@ -24,11 +24,9 @@ public class GUIArcade extends javax.swing.JFrame {
      */
     public GUIArcade() {
         initComponents();
+        btnGuardarCobro.setEnabled(false);
         this.setResizable(false);
         this.setLocationRelativeTo(null);
-
-        btnGuardarCobro.setEnabled(false);
-        
     }
 
     /**
@@ -54,27 +52,19 @@ public class GUIArcade extends javax.swing.JFrame {
         txtHorasAlquiladas = new javax.swing.JTextField();
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Arcade"));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        cmbArcade.setBackground(new java.awt.Color(204, 204, 255));
         cmbArcade.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arcade deportivo", "Arcade carreras", "Arcade simulación", "Arcade acción", "Arcade clasico" }));
         cmbArcade.setSelectedIndex(-1);
-        jPanel1.add(cmbArcade, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 54, 155, -1));
 
-        lblArcade.setBackground(new java.awt.Color(255, 255, 255));
         lblArcade.setText("Arcade:");
-        jPanel1.add(lblArcade, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 57, -1, -1));
 
         lblNumJugadores.setText("Número de jugadores:");
-        jPanel1.add(lblNumJugadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(125, 92, -1, -1));
 
         btgNumJugadores.add(rbt1);
         rbt1.setText("1");
-        jPanel1.add(rbt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(241, 92, -1, -1));
 
         btgNumJugadores.add(rbt2);
         rbt2.setText("2");
-        jPanel1.add(rbt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(241, 118, -1, -1));
 
         btnCalcularpago.setText("Calcular Cobro");
         btnCalcularpago.addActionListener(new java.awt.event.ActionListener() {
@@ -82,7 +72,6 @@ public class GUIArcade extends javax.swing.JFrame {
                 btnCalcularpagoActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCalcularpago, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 194, -1, -1));
 
         btnGuardarCobro.setText("Guardar Cobro");
         btnGuardarCobro.addActionListener(new java.awt.event.ActionListener() {
@@ -90,7 +79,6 @@ public class GUIArcade extends javax.swing.JFrame {
                 btnGuardarCobroActionPerformed(evt);
             }
         });
-        jPanel1.add(btnGuardarCobro, new org.netbeans.lib.awtextra.AbsoluteConstraints(163, 194, -1, -1));
 
         btnCancelarCobro.setText("Cancelar Cobro");
         btnCancelarCobro.addActionListener(new java.awt.event.ActionListener() {
@@ -98,21 +86,84 @@ public class GUIArcade extends javax.swing.JFrame {
                 btnCancelarCobroActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCancelarCobro, new org.netbeans.lib.awtextra.AbsoluteConstraints(298, 194, -1, -1));
 
         lblHorasAlquiladas.setText("Horas alquiladas:");
-        jPanel1.add(lblHorasAlquiladas, new org.netbeans.lib.awtextra.AbsoluteConstraints(125, 153, -1, -1));
-        jPanel1.add(txtHorasAlquiladas, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 150, 48, -1));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(116, 116, 116)
+                .addComponent(lblArcade)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cmbArcade, 0, 155, Short.MAX_VALUE)
+                .addGap(108, 108, 108))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(116, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(lblHorasAlquiladas)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtHorasAlquiladas, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(lblNumJugadores)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(rbt2)
+                                    .addComponent(rbt1)))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(btnCalcularpago)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnGuardarCobro)
+                        .addGap(4, 4, 4)))
+                .addGap(26, 26, 26)
+                .addComponent(btnCancelarCobro)
+                .addGap(28, 28, 28))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblArcade)
+                    .addComponent(cmbArcade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblNumJugadores)
+                    .addComponent(rbt1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbt2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblHorasAlquiladas)
+                    .addComponent(txtHorasAlquiladas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCalcularpago)
+                    .addComponent(btnGuardarCobro)
+                    .addComponent(btnCancelarCobro))
+                .addGap(19, 19, 19))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 264, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -154,7 +205,7 @@ public class GUIArcade extends javax.swing.JFrame {
 
     private void btnGuardarCobroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarCobroActionPerformed
         // TODO add your handling code here:
-        GUICobro.setCobroTotal(cobro);
+        PnlCobro.setCobroTotal(cobro);
         FmrMenu.equiposAlquilados.add(arcade);
         llimpiar();
         btnGuardarCobro.setEnabled(false);

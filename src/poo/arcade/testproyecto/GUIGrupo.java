@@ -17,8 +17,6 @@ public class GUIGrupo extends javax.swing.JFrame {
      * Creates new form GUIGrupo
      */
     public GUIGrupo() {
-        this.setResizable(false);
-        this.setLocationRelativeTo(null);
         initComponents();
     }
 

@@ -22,9 +22,9 @@ private double cobro;
      */
     public GUIConsola() {
         initComponents();
+        btnGuardarCobro.setEnabled(false);
         this.setResizable(false);
         this.setLocationRelativeTo(null);
-        btnGuardarCobro.setEnabled(false);
     }
 
     /**
@@ -187,7 +187,7 @@ private double cobro;
 
     private void btnGuardarCobroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarCobroActionPerformed
         // TODO add your handling code here:
-        GUICobro.setCobroTotal(cobro);
+        PnlCobro.setCobroTotal(cobro);
         FmrMenu.equiposAlquilados.add(consola);
         llimpiar();
         btnGuardarCobro.setEnabled(false);

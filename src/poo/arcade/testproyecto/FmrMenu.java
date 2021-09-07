@@ -14,26 +14,20 @@ import poo.clases.proyecto.Maquina;
  * @author erick cabezas
  */
 public class FmrMenu extends javax.swing.JFrame {
-    GUICobro cobro;
-    DefaultTableModel dtmModelo;
+    
+    
+    PnlCobro pnlCobro;
+    PnlCuenta pnlCuenta;
     static ArrayList<Maquina> equiposAlquilados;
     /**
      * Creates new form FmrMenu
      */
     public FmrMenu() {
         initComponents();
-        this.setResizable(false);
-        this.setLocationRelativeTo(null);
-        cobro=new GUICobro();
-        //this.setExtendedState(MAXIMIZED_BOTH);
-        dtmModelo= new DefaultTableModel(); // inicializamos el modelo de la tabla
+        pnlCuenta=new PnlCuenta();
+        pnlCobro=new PnlCobro();
+        this.setExtendedState(MAXIMIZED_BOTH);
         equiposAlquilados=new ArrayList<>();
-        dtmModelo.addColumn("Equipo");
-        dtmModelo.addColumn("Horas Alquiladas");
-        dtmModelo.addColumn("Valor Por Hora");
-        dtmModelo.addColumn("Valor Cobrado");
-        tblCuenta.setModel(dtmModelo);
-        
     }
 
     /**
@@ -45,25 +39,19 @@ public class FmrMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnCuneta = new javax.swing.JButton();
+        pnl1 = new javax.swing.JPanel();
         btnCobrar = new javax.swing.JButton();
         lblCobrar = new javax.swing.JLabel();
         lblCuenta = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tblCuenta = new javax.swing.JTable();
-        lblCobrototal = new javax.swing.JLabel();
-        lblDolar = new javax.swing.JLabel();
-        lblCobroTotal = new javax.swing.JLabel();
+        btnCuneta = new javax.swing.JButton();
+        lblMenu = new javax.swing.JLabel();
+        pnl2 = new javax.swing.JPanel();
+        lblPresentacion = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Menu Prinsipal");
+        setTitle("Menu Principal");
 
-        btnCuneta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/payment_tax_invoice_calculator_icon_188745.png"))); // NOI18N
-        btnCuneta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCunetaActionPerformed(evt);
-            }
-        });
+        pnl1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 153, 0)));
 
         btnCobrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/business-color_payment_icon-icons.com_53442.png"))); // NOI18N
         btnCobrar.addActionListener(new java.awt.event.ActionListener() {
@@ -78,79 +66,99 @@ public class FmrMenu extends javax.swing.JFrame {
         lblCuenta.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblCuenta.setText("Cuenta:");
 
-        tblCuenta.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+        btnCuneta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/payment_tax_invoice_calculator_icon_188745.png"))); // NOI18N
+        btnCuneta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCunetaActionPerformed(evt);
             }
-        ));
-        jScrollPane1.setViewportView(tblCuenta);
+        });
 
-        lblCobrototal.setText("Ingresos totales:");
+        lblMenu.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblMenu.setText("Menu");
 
-        lblDolar.setForeground(new java.awt.Color(0, 102, 0));
-        lblDolar.setText("$");
+        javax.swing.GroupLayout pnl1Layout = new javax.swing.GroupLayout(pnl1);
+        pnl1.setLayout(pnl1Layout);
+        pnl1Layout.setHorizontalGroup(
+            pnl1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl1Layout.createSequentialGroup()
+                .addGroup(pnl1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl1Layout.createSequentialGroup()
+                        .addGap(77, 77, 77)
+                        .addComponent(lblCobrar)
+                        .addGap(7, 7, 7))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblCuenta)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                .addGroup(pnl1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCuneta, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCobrar, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMenu))
+                .addContainerGap(80, Short.MAX_VALUE))
+        );
+        pnl1Layout.setVerticalGroup(
+            pnl1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl1Layout.createSequentialGroup()
+                .addGroup(pnl1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(pnl1Layout.createSequentialGroup()
+                        .addGap(122, 122, 122)
+                        .addComponent(lblCobrar)
+                        .addGap(41, 41, 41))
+                    .addGroup(pnl1Layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(lblMenu)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnCobrar)))
+                .addGroup(pnl1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl1Layout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addComponent(btnCuneta, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnl1Layout.createSequentialGroup()
+                        .addGap(85, 85, 85)
+                        .addComponent(lblCuenta)))
+                .addContainerGap(226, Short.MAX_VALUE))
+        );
 
-        lblCobroTotal.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
-        lblCobroTotal.setText(".......");
+        pnl2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 204, 204)));
+
+        lblPresentacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/arcade_119621 (1).png"))); // NOI18N
+
+        javax.swing.GroupLayout pnl2Layout = new javax.swing.GroupLayout(pnl2);
+        pnl2.setLayout(pnl2Layout);
+        pnl2Layout.setHorizontalGroup(
+            pnl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl2Layout.createSequentialGroup()
+                .addGap(138, 138, 138)
+                .addComponent(lblPresentacion)
+                .addContainerGap(301, Short.MAX_VALUE))
+        );
+        pnl2Layout.setVerticalGroup(
+            pnl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl2Layout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addComponent(lblPresentacion)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(lblCobrar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnCobrar, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(73, 73, 73)
-                        .addComponent(lblCuenta)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnCuneta, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(70, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblCobrototal)
-                .addGap(24, 24, 24)
-                .addComponent(lblCobroTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblDolar)
-                .addGap(66, 66, 66))
+                .addContainerGap()
+                .addComponent(pnl1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(pnl2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(51, 51, 51)
-                        .addComponent(lblCobrar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addComponent(lblCuenta))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(btnCobrar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(btnCuneta, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCobrototal)
-                    .addComponent(lblDolar)
-                    .addComponent(lblCobroTotal))
-                .addContainerGap(36, Short.MAX_VALUE))
+                    .addComponent(pnl1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -158,20 +166,27 @@ public class FmrMenu extends javax.swing.JFrame {
 
     private void btnCobrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCobrarActionPerformed
         // TODO add your handling code here:
-        cobro.setVisible(true);
-        
-        
+        lblPresentacion.setVisible(false);
+        pnlCuenta.setVisible(false);
+        pnlCobro.setVisible(true);
+        pnlCobro.setSize(600, 500);
+        pnlCobro.setLocation(50,50);
+        pnl2.add(pnlCobro);
+        revalidate();
+        repaint();
     }//GEN-LAST:event_btnCobrarActionPerformed
 
     private void btnCunetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCunetaActionPerformed
         // TODO add your handling code here:
-        dtmModelo.setRowCount(0);
-        for(Maquina eqp: equiposAlquilados){
-            dtmModelo.addRow(new Object[]{eqp.toString(),eqp.getHorasDealquiler(),eqp.getValorPorHora()
-            ,eqp.getCobrado()});
-            
-        }
-        lblCobroTotal.setText(Double.toString(GUICobro.getCobroTotal()));
+        lblPresentacion.setVisible(false);
+        pnlCobro.setVisible(false);
+        pnlCuenta.setVisible(true);
+        pnlCuenta.llenarTabla();
+        pnlCuenta.setSize(650, 500);
+        pnlCuenta.setLocation(50,50);
+        pnl2.add(pnlCuenta);
+        revalidate();
+        repaint();
     }//GEN-LAST:event_btnCunetaActionPerformed
 
     /**
@@ -212,12 +227,11 @@ public class FmrMenu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCobrar;
     private javax.swing.JButton btnCuneta;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblCobrar;
-    private javax.swing.JLabel lblCobroTotal;
-    private javax.swing.JLabel lblCobrototal;
     private javax.swing.JLabel lblCuenta;
-    private javax.swing.JLabel lblDolar;
-    private javax.swing.JTable tblCuenta;
+    private javax.swing.JLabel lblMenu;
+    private javax.swing.JLabel lblPresentacion;
+    private javax.swing.JPanel pnl1;
+    private javax.swing.JPanel pnl2;
     // End of variables declaration//GEN-END:variables
 }
