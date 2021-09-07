@@ -46,18 +46,28 @@ private double cobro;
         btnCancelarCobro = new javax.swing.JButton();
         txtHorasAlquiladas = new javax.swing.JTextField();
         lblHorasAlquiladas = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+
+        setTitle("Consola");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Consola de videojuegos"));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        lblConsola.setForeground(new java.awt.Color(255, 255, 255));
         lblConsola.setText("Consola:");
+        jPanel1.add(lblConsola, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, -1, -1));
 
         cmbConsola.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Xbox One", "Xbox Series X", "Wii", "Playstation 4", "Playstation 5" }));
         cmbConsola.setSelectedIndex(-1);
+        jPanel1.add(cmbConsola, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 167, -1));
 
-        lblNumMandos.setText("Numero de mandos:");
+        lblNumMandos.setForeground(new java.awt.Color(255, 255, 255));
+        lblNumMandos.setText("Número de mandos:");
+        jPanel1.add(lblNumMandos, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, -1, -1));
 
         cmbMandos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4" }));
         cmbMandos.setSelectedIndex(-1);
+        jPanel1.add(cmbMandos, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, -1, -1));
 
         btnCalcularpago.setText("Calcular Cobro");
         btnCalcularpago.addActionListener(new java.awt.event.ActionListener() {
@@ -65,6 +75,7 @@ private double cobro;
                 btnCalcularpagoActionPerformed(evt);
             }
         });
+        jPanel1.add(btnCalcularpago, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
 
         btnGuardarCobro.setText("Guardar Cobro");
         btnGuardarCobro.addActionListener(new java.awt.event.ActionListener() {
@@ -72,6 +83,7 @@ private double cobro;
                 btnGuardarCobroActionPerformed(evt);
             }
         });
+        jPanel1.add(btnGuardarCobro, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, -1, -1));
 
         btnCancelarCobro.setText("Cancelar Cobro");
         btnCancelarCobro.addActionListener(new java.awt.event.ActionListener() {
@@ -79,77 +91,25 @@ private double cobro;
                 btnCancelarCobroActionPerformed(evt);
             }
         });
+        jPanel1.add(btnCancelarCobro, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 200, -1, -1));
+        jPanel1.add(txtHorasAlquiladas, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 48, -1));
 
+        lblHorasAlquiladas.setForeground(new java.awt.Color(255, 255, 255));
         lblHorasAlquiladas.setText("Horas alquiladas:");
+        jPanel1.add(lblHorasAlquiladas, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(132, 132, 132)
-                .addComponent(lblConsola)
-                .addGap(18, 18, 18)
-                .addComponent(cmbConsola, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(167, 167, 167))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addComponent(btnCalcularpago)
-                        .addGap(52, 52, 52)
-                        .addComponent(btnGuardarCobro)
-                        .addGap(37, 37, 37)
-                        .addComponent(btnCancelarCobro))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(134, 134, 134)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblNumMandos)
-                            .addComponent(lblHorasAlquiladas))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtHorasAlquiladas, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cmbMandos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(70, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblConsola)
-                    .addComponent(cmbConsola, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNumMandos)
-                    .addComponent(cmbMandos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblHorasAlquiladas)
-                    .addComponent(txtHorasAlquiladas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnGuardarCobro)
-                    .addComponent(btnCalcularpago)
-                    .addComponent(btnCancelarCobro))
-                .addContainerGap(34, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/background/LogoAZMarco.jpg"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 260));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -265,6 +225,7 @@ private double cobro;
     private javax.swing.JButton btnGuardarCobro;
     private javax.swing.JComboBox<String> cmbConsola;
     private javax.swing.JComboBox<String> cmbMandos;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblConsola;
     private javax.swing.JLabel lblHorasAlquiladas;
