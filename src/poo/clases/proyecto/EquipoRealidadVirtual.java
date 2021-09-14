@@ -22,7 +22,7 @@ public class EquipoRealidadVirtual extends Maquina{
         if("Valve Index".equals(this.tipoDeEquipoRV)){
             this.valorPorHora =4.80;
         }
-        if("Oculus Rift ".equals(this.tipoDeEquipoRV)){
+        if("Oculus Rift".equals(this.tipoDeEquipoRV)){
             this.valorPorHora =5.60;
         }     
         if("HTC Vive".equals(this.tipoDeEquipoRV)){
