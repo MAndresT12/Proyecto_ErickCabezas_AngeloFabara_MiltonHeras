@@ -74,14 +74,14 @@ public class GUIArcade extends javax.swing.JFrame {
         rbt1.setForeground(new java.awt.Color(255, 255, 255));
         rbt1.setText("1");
         rbt1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        jPanel1.add(rbt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, 30, 20));
+        jPanel1.add(rbt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, 40, 20));
 
         rbt2.setBackground(new java.awt.Color(204, 204, 255));
         btgNumJugadores.add(rbt2);
         rbt2.setForeground(new java.awt.Color(255, 255, 255));
         rbt2.setText("2");
         rbt2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        jPanel1.add(rbt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 110, 30, 20));
+        jPanel1.add(rbt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 110, 40, 20));
 
         btnCalcularpago.setText("Calcular Cobro");
         btnCalcularpago.addActionListener(new java.awt.event.ActionListener() {
